@@ -1,12 +1,12 @@
 <h1> Places I've Been </h1>
 
-<p> I have been to <%= @places.count %> places </p>
-
-<ul>
+  <ul>
   <% for place in @places %>
   <li>
-    <%= place["name"] %>
-  </li>
+    <a href="/places/<%= place["id"] %>"><%= place["name"] %></a>
+    </li>
   <% end %>
-</ul>
+  </ul>
+ 
 
+<p><a href="/places/new">New Place</a></p>

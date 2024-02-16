@@ -1,6 +1,24 @@
 <h1> <%= @place["name"] %> </h1>
 
+<!-- Place and Entry details page -->
+
+<p>
+<% for entry in @entries %>
+      <h2> <%= entry["title"] %> </h2>
+      <p> <%=entry["posted_on"] %> </p>
+      <p> <%= entry["description"] %> </p>
+  <% end %>
+</p>
+
+<p>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
+</p>
+
 
 <p>
   <a href="/places">Back to All Places</a>
 </p>
+
+
+
+
