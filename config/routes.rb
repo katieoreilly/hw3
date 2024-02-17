@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   resources "places"
-  get("/", { :controller => "things", :action => "index" })
-
   resources "entries"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
